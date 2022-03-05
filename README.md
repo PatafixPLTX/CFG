@@ -1,4 +1,4 @@
-#Infos
+Infos
 
 COM :
 
