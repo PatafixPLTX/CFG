@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+    
+.content{
+    position: relative;
+    background: #1f1f1f;
+    min-height: 100vh;
+    top: 0;
+    left: 78px;
+    width: calc(100% - 78px);
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  .sidebar.open ~ .content{
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+  .content .text{
+    display: inline-block;
+    color: #F5F5F5;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 18px
+  }
