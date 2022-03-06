@@ -1,0 +1,25 @@
+{
+  "name": "cfg",
+  "version": "0.0.1",
+  "description": "Connect Four With Gravity",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatafixPLTX/CFG.git"
+  },
+  "keywords": [
+    "Connect",
+    "Four",
+    "Web",
+    "GitHub"
+  ],
+  "author": "Lebaube Gaspard and Leys Kamil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PatafixPLTX/CFG/issues"
+  },
+  "homepage": "https://github.com/PatafixPLTX/CFG#readme"
+}
