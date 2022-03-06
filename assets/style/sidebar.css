@@ -130,6 +130,7 @@
     color: rgb(20, 20, 20);
   }
   .sidebar li a{
+    cursor: pointer;
     display: flex;
     height: 100%;
     width: 100%;
