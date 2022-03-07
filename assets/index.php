@@ -50,7 +50,7 @@
             </div>
             <ul class="nav-list">
                 <li>
-                    <a href="play.html">
+                    <a href="game.php">
                         <i class='bx bx-right-arrow'></i>
                         <span class="links_name">Play</span>
                     </a>
@@ -110,7 +110,7 @@
 
         <content class="content">
 
-            <?php include 'page/home.html'?>
+            <!-- ICI -->
 
         </content>
 
