@@ -29,6 +29,11 @@ function drawYourCircle(posX, posY) {
     ctx.fillStyle = "yellow";
     ctx.arc(posX * oneOnTenWidth + oneOnTenWidth / 2, posY * oneOnTenHeigth + oneOnTenHeigth / 2, oneOnTenHeigth / 2 - 4, 0, 2 * Math.PI, false);
     ctx.fill();
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.moveTo(posX*oneOnTenWidth+4, posY * oneOnTenHeigth + oneOnTenHeigth / 2);
+    ctx.lineTo(posX * oneOnTenWidth + oneOnTenWidth-4, posY * oneOnTenHeigth + oneOnTenHeigth / 2);
+    ctx.stroke();
 }
 
 function drawEnemyCircle(posX, posY) {
