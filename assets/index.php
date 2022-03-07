@@ -27,7 +27,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CFG - Home</title>
+    <title>CFG - Official</title>
 
 </head>
 
@@ -57,7 +57,7 @@
                     <span class="tooltip">Play</span>
                 </li>
                 <li>
-                    <a href="index.html">
+                    <a href="index.php">
                         <i class='bx bx-home'></i>
                         <span class="links_name">Home</span>
                     </a>
@@ -110,7 +110,7 @@
 
         <content class="content">
 
-            <?php include 'home.html'?>
+            <?php include 'page/home.html'?>
 
         </content>
 
