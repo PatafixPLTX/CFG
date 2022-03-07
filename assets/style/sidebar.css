@@ -112,23 +112,6 @@
     padding: 0 20px 0 50px;
     width: 100%;
   }
-  .sidebar .bx-search{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    font-size: 22px;
-    background: rgb(15, 15, 15);
-    color: #F5F5F5;
-  }
-  .sidebar.open .bx-search:hover{
-    background: rgb(15, 15, 15);
-    color: #F5F5F5;
-  }
-  .sidebar .bx-search:hover{
-    background: #F5F5F5;
-    color: rgb(20, 20, 20);
-  }
   .sidebar li a{
     cursor: pointer;
     display: flex;
