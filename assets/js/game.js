@@ -43,8 +43,8 @@ function drawEnemyCircle(posX, posY) {
     ctx.fill();
     ctx.beginPath();
     ctx.strokeStyle = "white";
-    ctx.moveTo(posX*oneOnTenWidth+4, posY * oneOnTenHeigth + oneOnTenHeigth / 2);
-    ctx.lineTo(posX * oneOnTenWidth + oneOnTenWidth-4, posY * oneOnTenHeigth + oneOnTenHeigth / 2);
+    ctx.moveTo(posX*oneOnTenWidth+5, posY * oneOnTenHeigth + oneOnTenHeigth / 2);
+    ctx.lineTo(posX * oneOnTenWidth + oneOnTenWidth-5, posY * oneOnTenHeigth + oneOnTenHeigth / 2);
     ctx.stroke();
 }
 
