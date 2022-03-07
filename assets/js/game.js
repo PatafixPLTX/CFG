@@ -26,7 +26,7 @@ let rect = null;
 
 function drawYourCircle(posX, posY) {
     ctx.beginPath();
-    ctx.fillStyle = "light yellow";
+    ctx.fillStyle = "rgb(255,255,0);";
     ctx.arc(posX * oneOnTenWidth + oneOnTenWidth / 2, posY * oneOnTenHeigth + oneOnTenHeigth / 2, oneOnTenHeigth / 2 - 4, 0, 2 * Math.PI, false);
     ctx.fill();
 }
