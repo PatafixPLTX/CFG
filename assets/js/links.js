@@ -11,6 +11,8 @@ let content = document.getElementById("content");
 
 let currentPage = 1;
 
+let fois = 0 ;
+
 let play_func = ()=>{
     if(currentPage == 0) {if(fois>5)award();fois++;return;}
     fois = 0;
