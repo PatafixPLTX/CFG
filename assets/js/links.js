@@ -11,9 +11,6 @@ let content = document.getElementById("content");
 
 let currentPage = 1;
 
-let tableau = [play, home, news, shop, rank, settings, profile];
-let funcs = [play_func, home_func, news_func, shop_func, rank_func, settings_func, profile_func];
-
 let play_func = ()=>{
     if(currentPage == 0) {if(fois>5)award();fois++;return;}
     fois = 0;
@@ -84,6 +81,9 @@ let profile_func = ()=>{
     newContent.src = "page/profile.js";
     content.appendChild(newContent);
 }
+
+let tableau = [play, home, news, shop, rank, settings, profile];
+let funcs = [play_func, home_func, news_func, shop_func, rank_func, settings_func, profile_func];
 
 $(document).ready(function () {
     for(let i=0; i<tableau.length; i++){
