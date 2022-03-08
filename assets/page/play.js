@@ -1,1 +1,1 @@
-content.innerHTML = "<h1>Play!!!</h1>";
+content.innerHTML = '<script src="js/game.js"></script>';
