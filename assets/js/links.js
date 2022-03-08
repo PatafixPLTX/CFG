@@ -17,6 +17,7 @@ let funcs = [play_func, home_func, news_func, shop_func, rank_func, settings_fun
 let play_func = ()=>{
     if(currentPage == 0) {if(fois>5)award();fois++;return;}
     fois = 0;
+    currentPage = 0;
 
     content.innerHTML = " ";
     let newContent = document.createElement("script");
@@ -26,6 +27,7 @@ let play_func = ()=>{
 let home_func = ()=>{
     if(currentPage == 1) {if(fois>5)award();fois++;return;}
     fois = 0;
+    currentPage = 1;
 
     content.innerHTML = " ";
     let newContent = document.createElement("script");
@@ -35,6 +37,7 @@ let home_func = ()=>{
 let news_func = ()=>{
     if(currentPage == 2) {if(fois>5)award();fois++;return;}
     fois = 0;
+    currentPage = 2;
 
     content.innerHTML = " ";
     let newContent = document.createElement("script");
@@ -44,6 +47,7 @@ let news_func = ()=>{
 let shop_func = ()=>{
     if(currentPage == 3) {if(fois>5)award();fois++;return;}
     fois = 0;
+    currentPage = 3;
 
     content.innerHTML = " ";
     let newContent = document.createElement("script");
@@ -53,6 +57,7 @@ let shop_func = ()=>{
 let rank_func = ()=>{
     if(currentPage == 4) {if(fois>5)award();fois++;return;}
     fois = 0;
+    currentPage = 4;
 
     content.innerHTML = " ";
     let newContent = document.createElement("script");
@@ -62,6 +67,7 @@ let rank_func = ()=>{
 let settings_func = ()=>{
     if(currentPage == 5) {if(fois>5)award();fois++;return;}
     fois = 0;
+    currentPage = 5;
 
     content.innerHTML = " ";
     let newContent = document.createElement("script");
@@ -71,6 +77,7 @@ let settings_func = ()=>{
 let profile_func = ()=>{
     if(currentPage == 6) {if(fois>5)award();fois++;return;}
     fois = 0;
+    currentPage = 6;
 
     content.innerHTML = " ";
     let newContent = document.createElement("script");
