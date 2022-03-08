@@ -43,7 +43,7 @@ $(document).ready(function () {
     canvas.width = 400;
     canvas.height = 400;
     canvas.style = "z-index: 10;background: rgb(50,50,175);padding: 0;margin: auto;display: block;position: absolute;left:78px;right:0px;bottom:0px;top: 0px;border: 5px black solid;transition: all 0.5s ease;";
-    document.body.appendChild(canvas);
+    content.appendChild(canvas);
     halfWidthCanvas = canvas.width / 2;
     halfHeigthCanvas = canvas.height / 2;
 
