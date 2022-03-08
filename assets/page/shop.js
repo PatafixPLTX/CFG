@@ -1,1 +1,1 @@
-content.innerHTML = '<img src="img/profile.jpg"></img>';
+content.innerHTML = "<h1>The shop</h1>";
