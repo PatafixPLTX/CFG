@@ -1,0 +1,1 @@
+content.innerHTML = "<h1>Your rank</h1>";

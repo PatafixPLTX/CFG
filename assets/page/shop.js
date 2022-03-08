@@ -1,0 +1,1 @@
+content.innerHTML = '<img src="img/profile.jpg"></img>';
