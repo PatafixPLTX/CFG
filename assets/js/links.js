@@ -41,9 +41,9 @@ let play_func = () => {
     newContent.src = "page/play.js";
     content.appendChild(newContent);
 }
-let home_func = () => {
+let home_func = (force) => {
     removeCanvas();
-    if (currentPage == 1) { if (fois > 5) award(); fois++; return; }
+    if (currentPage == 1 && force!=true) { if (fois > 5) award(); fois++; return; }
     fois = 0;
     currentPage = 1;
 
@@ -120,7 +120,7 @@ let tableau = [play, home, news, shop, rank, settings, profile];
 let funcs = [play_func, home_func, news_func, shop_func, rank_func, settings_func, profile_func];
 
 $(document).ready(function () {
-    setTimeout(home_func(), 250);
+    setTimeout(home_func, 250, true);
     for (let i = 0; i < tableau.length; i++) {
         tableau[i].addEventListener("click", funcs[i]);
     }
