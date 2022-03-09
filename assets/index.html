@@ -44,8 +44,8 @@
         <div class="sidebar">
 
             <div class="logo-details">
-                <i class='bx bxs-grid icon'></i>
-                <div class="logo_name">CFG</div>
+                <i class='bx bxs-grid icon logo'></i>
+                <div class="logo_name logo">CFG</div>
                 <i class='bx bx-menu' id="btn"></i>
             </div>
             <ul class="nav-list">
@@ -93,17 +93,17 @@
                 </li>
                 <li class="profile">
 
-                    <!-- Provisional Profil -> PHP -->
-                    <div class="profile-details" id="profile">
-                        <img src="img/profile.jpg" alt="profileImg">
-                        <div class="name_rank">
-                            <div class="name">Patafix</div>
-                            <div class="rank">Master III</div>
-                        </div>
+                    <!-- Provisional Profil -> JS -->
+                    <div class="profile-details" id="profile" onmouseover="onHover();" onmouseout="offHover();" />
+                    <img src="img/profileImg.jpg" id="profileImg" alt="profileImg">
+                    <div class="name_rank">
+                        <div class="name">Patafix</div>
+                        <div class="rank">Master III</div>
                     </div>
-                    <i class='bx bx-log-out' id="log_out"></i>
-                </li>
-            </ul>
+        </div>
+        <i class='bx bx-log-out' id="log_out"></i>
+        </li>
+        </ul>
         </div>
 
         <!-- PAGE -> PHP variable page -->
