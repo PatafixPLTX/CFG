@@ -1,3 +1,18 @@
+// BEGIN OF GAME VARIABLES
+let ctx = null;
+let canvasState = null;
+
+let currentMouseOver = [-100, -100];
+let currentCase = [-1, -1];
+let lastCase = [1, 1];
+let yourTurn = true;
+
+let oneOnTenHeigth = null;
+let oneOnTenWidth = null;
+let halfWidthCanvas = null;
+let halfHeigthCanvas = null;
+let rect = null;
+// END OF GAME VARIABLES
 let play = document.getElementById("play");
 let home = document.getElementById("home");
 let news = document.getElementById("news");
@@ -14,10 +29,10 @@ let canvas = null;
 
 let currentPage = 1;
 
-let fois = 0 ;
+let fois = 0;
 
-let play_func = ()=>{
-    if(currentPage == 0) {if(fois>5)award();fois++;return;}
+let play_func = () => {
+    if (currentPage == 0) { if (fois > 5) award(); fois++; return; }
     fois = 0;
     currentPage = 0;
 
@@ -26,8 +41,8 @@ let play_func = ()=>{
     newContent.src = "page/play.js";
     content.appendChild(newContent);
 }
-let home_func = ()=>{
-    if(currentPage == 1) {if(fois>5)award();fois++;return;}
+let home_func = () => {
+    if (currentPage == 1) { if (fois > 5) award(); fois++; return; }
     fois = 0;
     currentPage = 1;
 
@@ -36,8 +51,8 @@ let home_func = ()=>{
     newContent.src = "page/home.js";
     content.appendChild(newContent);
 }
-let news_func = ()=>{
-    if(currentPage == 2) {if(fois>5)award();fois++;return;}
+let news_func = () => {
+    if (currentPage == 2) { if (fois > 5) award(); fois++; return; }
     fois = 0;
     currentPage = 2;
 
@@ -46,8 +61,8 @@ let news_func = ()=>{
     newContent.src = "page/news.js";
     content.appendChild(newContent);
 }
-let shop_func = ()=>{
-    if(currentPage == 3) {if(fois>5)award();fois++;return;}
+let shop_func = () => {
+    if (currentPage == 3) { if (fois > 5) award(); fois++; return; }
     fois = 0;
     currentPage = 3;
 
@@ -56,8 +71,8 @@ let shop_func = ()=>{
     newContent.src = "page/shop.js";
     content.appendChild(newContent);
 }
-let rank_func = ()=>{
-    if(currentPage == 4) {if(fois>5)award();fois++;return;}
+let rank_func = () => {
+    if (currentPage == 4) { if (fois > 5) award(); fois++; return; }
     fois = 0;
     currentPage = 4;
 
@@ -66,9 +81,9 @@ let rank_func = ()=>{
     newContent.src = "page/rank.js";
     content.appendChild(newContent);
 }
-let settings_func = ()=>{
+let settings_func = () => {
     canvas.parentNode.removeChild(canvas);
-    if(currentPage == 5) {if(fois>5)award();fois++;return;}
+    if (currentPage == 5) { if (fois > 5) award(); fois++; return; }
     fois = 0;
     currentPage = 5;
 
@@ -77,8 +92,8 @@ let settings_func = ()=>{
     newContent.src = "page/settings.js";
     content.appendChild(newContent);
 }
-let profile_func = ()=>{
-    if(currentPage == 6) {if(fois>5)award();fois++;return;}
+let profile_func = () => {
+    if (currentPage == 6) { if (fois > 5) award(); fois++; return; }
     fois = 0;
     currentPage = 6;
 
@@ -92,7 +107,7 @@ let tableau = [play, home, news, shop, rank, settings, profile];
 let funcs = [play_func, home_func, news_func, shop_func, rank_func, settings_func, profile_func];
 
 $(document).ready(function () {
-    for(let i=0; i<tableau.length; i++){
-        tableau[i].addEventListener("click",funcs[i]);
+    for (let i = 0; i < tableau.length; i++) {
+        tableau[i].addEventListener("click", funcs[i]);
     }
 });
