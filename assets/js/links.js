@@ -42,6 +42,7 @@ let play_func = () => {
     content.appendChild(newContent);
 }
 let home_func = () => {
+    removeCanvas();
     if (currentPage == 1) { if (fois > 5) award(); fois++; return; }
     fois = 0;
     currentPage = 1;
@@ -52,6 +53,7 @@ let home_func = () => {
     content.appendChild(newContent);
 }
 let news_func = () => {
+    removeCanvas();
     if (currentPage == 2) { if (fois > 5) award(); fois++; return; }
     fois = 0;
     currentPage = 2;
@@ -62,6 +64,7 @@ let news_func = () => {
     content.appendChild(newContent);
 }
 let shop_func = () => {
+    removeCanvas();
     if (currentPage == 3) { if (fois > 5) award(); fois++; return; }
     fois = 0;
     currentPage = 3;
@@ -72,6 +75,7 @@ let shop_func = () => {
     content.appendChild(newContent);
 }
 let rank_func = () => {
+    removeCanvas();
     if (currentPage == 4) { if (fois > 5) award(); fois++; return; }
     fois = 0;
     currentPage = 4;
@@ -82,7 +86,7 @@ let rank_func = () => {
     content.appendChild(newContent);
 }
 let settings_func = () => {
-    canvas.parentNode.removeChild(canvas);
+    removeCanvas();
     if (currentPage == 5) { if (fois > 5) award(); fois++; return; }
     fois = 0;
     currentPage = 5;
@@ -93,6 +97,7 @@ let settings_func = () => {
     content.appendChild(newContent);
 }
 let profile_func = () => {
+    removeCanvas();
     if (currentPage == 6) { if (fois > 5) award(); fois++; return; }
     fois = 0;
     currentPage = 6;
@@ -101,6 +106,14 @@ let profile_func = () => {
     let newContent = document.createElement("script");
     newContent.src = "page/profile.js";
     content.appendChild(newContent);
+}
+
+let removeCanvas = ()=>{
+    try{
+        canvas.parentNode.removeChild(canvas);
+    }catch(error){
+        console.log("canvas still not defined yet");
+    }
 }
 
 let tableau = [play, home, news, shop, rank, settings, profile];
