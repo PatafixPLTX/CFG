@@ -10,6 +10,7 @@ let profile = document.getElementById("profile");
 let content = document.getElementById("content");
 
 let canvasScript = null;
+let canvas = null;
 
 let currentPage = 1;
 

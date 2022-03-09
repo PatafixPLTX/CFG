@@ -1,4 +1,3 @@
-let canvas = null;
 let ctx = null;
 let canvasState = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
