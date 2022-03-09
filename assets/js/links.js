@@ -120,6 +120,7 @@ let tableau = [play, home, news, shop, rank, settings, profile];
 let funcs = [play_func, home_func, news_func, shop_func, rank_func, settings_func, profile_func];
 
 $(document).ready(function () {
+    home_func();
     for (let i = 0; i < tableau.length; i++) {
         tableau[i].addEventListener("click", funcs[i]);
     }
