@@ -43,7 +43,6 @@ let play_func = () => {
 }
 let home_func = () => {
     removeCanvas();
-    console.log("canvas removed!!!");
     if (currentPage == 1) { if (fois > 5) award(); fois++; return; }
     fois = 0;
     currentPage = 1;
