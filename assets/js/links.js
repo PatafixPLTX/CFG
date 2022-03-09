@@ -9,6 +9,8 @@ let profile = document.getElementById("profile");
 
 let content = document.getElementById("content");
 
+let canvasScript = null;
+
 let currentPage = 1;
 
 let fois = 0 ;
