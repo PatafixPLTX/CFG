@@ -77,6 +77,7 @@ let settings_func = ()=>{
     content.appendChild(newContent);
 }
 let profile_func = ()=>{
+    canvas.hide();
     if(currentPage == 6) {if(fois>5)award();fois++;return;}
     fois = 0;
     currentPage = 6;
