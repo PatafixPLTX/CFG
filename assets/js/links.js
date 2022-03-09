@@ -27,7 +27,7 @@ let content = document.getElementById("content");
 let canvasScript = null;
 let canvas = null;
 
-let currentPage = 1;
+let currentPage = 0;
 
 let fois = 0;
 
