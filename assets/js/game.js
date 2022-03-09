@@ -1,5 +1,22 @@
-let ctx = null;
-let canvasState = [
+try{
+    let ctx = null;
+    let canvasState = null;
+
+    let currentMouseOver = [-100, -100];
+    let currentCase = [-1, -1];
+    let lastCase = [1, 1];
+    let yourTurn = true;
+
+    let oneOnTenHeigth = null;
+    let oneOnTenWidth = null;
+    let halfWidthCanvas = null;
+    let halfHeigthCanvas = null;
+    let rect = null;
+}catch(error){
+    console.log("normal error caused by double declaration of variable: ", error);
+}
+
+canvasState = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -11,17 +28,6 @@ let canvasState = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ];
-
-let currentMouseOver = [-100, -100];
-let currentCase = [-1, -1];
-let lastCase = [1, 1];
-let yourTurn = true;
-
-let oneOnTenHeigth = null;
-let oneOnTenWidth = null;
-let halfWidthCanvas = null;
-let halfHeigthCanvas = null;
-let rect = null;
 
 function drawYourCircle(posX, posY) {
     ctx.beginPath();
