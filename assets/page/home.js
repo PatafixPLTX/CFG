@@ -1,1 +1,1 @@
-content.innerHTML = '<h1>Salut le monde</h1>';
+content.innerHTML = '<h1>Bienvenue dans home!!!</h1>';
