@@ -1,4 +1,5 @@
 # CFG
+
 Hey, guys, hey there ! 
 Today, we are proud to present our new project.
 
@@ -10,6 +11,8 @@ plan
 
 --------------------------------------------
 
+Presentation
+
 My name is Gaspard Lebaube and I am with my beautiful colleague Kamil Leys. 
 
 We would first like to thank some people who helped us for this project from time to time indirectly...
@@ -18,6 +21,8 @@ We thank the creators:
 
 
 --------------------------------------------
+
+Introdution
 
 Here is our beautiful game :
 
@@ -53,6 +58,8 @@ And you just have to assemble the gravity and the tray... and line up your 4 chi
 Simple? Test it!
 
 --------------------------------------------
+
+Somes advices 
 
 Okay, all right! 
 You have finally understood the general purpose of the game. Now is the time to pay more attention to it. 
