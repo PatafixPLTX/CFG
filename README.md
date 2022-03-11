@@ -31,7 +31,7 @@ Here is our **beautiful** game :
 IMG
 
 Just a tray of 10x10 boxes...
-Not much, yes, but potential...
+Not much, yes, but **potential**...
 Okay, now, if I tell you there are chips, and... that’s it: a tray and chips... 
 
 It’s already a good base. *Who wants better?*
@@ -86,5 +86,5 @@ However, during the course of the game (*round by round*), you should listen to 
 ## FAQ
 
 --------------------------------------------
-# Footer
+## Footer
 
