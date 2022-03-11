@@ -12,7 +12,7 @@ CFG is a version of the famous **Connect 4**. Only, a **gravity** system is adde
 * [Introdution](#introdution)
 * [Somes Advices](#somes-advices)
 * [FAQ](#faq)
-* [Footet](#footer)
+* [Footer](#footer)
 
 --------------------------------------------
 ## Acknowledgements
