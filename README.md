@@ -4,8 +4,8 @@ Hey, guys, hey there !
 
 Today, we are proud to present our **new project**.
 CFG is a version of the famous **Connect 4**. Only, a **gravity** system is added... Instead of just playing, *why not break your head a little ?*
-
-
+ㅤ
+ㅤ
 ## Summary
 
 * [Acknowledgements](#acknowledgements)
@@ -13,8 +13,8 @@ CFG is a version of the famous **Connect 4**. Only, a **gravity** system is adde
 * [Somes Advices](#somes-advices)
 * [FAQ](#faq)
 * [Footnotes](#footnotes)
-
-
+ㅤ
+ㅤ
 ## Acknowledgements
 
 My name is *Gaspard Lebaube* and I am with my **beautiful** colleague *Kamil Leys*. 
@@ -22,8 +22,8 @@ My name is *Gaspard Lebaube* and I am with my **beautiful** colleague *Kamil Ley
 We would first like to thank some people who helped us for this project from time to time indirectly...
 
 We thank the creators:
-
-
+ㅤ
+ㅤ
 ## Introdution
 
 Here is our **beautiful** game:
@@ -58,8 +58,8 @@ The chips will be drawn to the **middle** of the board !
 And you just have to assemble the gravity and the tray... and line up your **4 chips** ! 
 
 Simple ? Test it !
-
-
+ㅤ
+ㅤ
 ## Somes advices 
 
 Okay, all right ! 
@@ -81,8 +81,8 @@ However, during the course of the game (*round by round*), you should listen to 
 3- If you have to leave the game **absolutely** or you are **sure** to lose, ***declare forfeit***, you will have 1 minute of exclusion **only** (you will benefit for your **fair play**). If you leave the game without forfeiting, you will have **10 minutes** of exclusion (in case of bad connection, **you can resume**).
 
 4- And don’t forget that the **most important** thing is to have **fun**. It doesn’t matter if you lose, **you will progress** ! *Just time and training...*
-
-
+ㅤ
+ㅤ
 ## FAQ
 
 **-** *"But how many game modes are there ?"*
@@ -100,6 +100,7 @@ However, during the course of the game (*round by round*), you should listen to 
 **-** *"How can we support you ?"*
 
 > **You can just play our game. But if you want to help us financially, do not hesitate to take a serious step or a small item in the shop.**
-
+ㅤ
+ㅤ
 ## Footnotes
 
