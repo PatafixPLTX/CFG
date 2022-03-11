@@ -5,7 +5,7 @@ Hey, guys, hey there !
 Today, we are proud to present our **new project**.
 CFG is a version of the famous **Connect 4**. Only, a **gravity** system is added... Instead of just playing, *why not break your head a little ?*
 
---------------------------------------------
+
 ## Summary
 
 * [Acknowledgements](#acknowledgements)
@@ -14,7 +14,7 @@ CFG is a version of the famous **Connect 4**. Only, a **gravity** system is adde
 * [FAQ](#faq)
 * [Footnotes](#footnotes)
 
---------------------------------------------
+
 ## Acknowledgements
 
 My name is *Gaspard Lebaube* and I am with my **beautiful** colleague *Kamil Leys*. 
@@ -23,7 +23,7 @@ We would first like to thank some people who helped us for this project from tim
 
 We thank the creators:
 
---------------------------------------------
+
 ## Introdution
 
 Here is our **beautiful** game :
@@ -59,7 +59,7 @@ And you just have to assemble the gravity and the tray... and line up your **4 c
 
 Simple? Test it!
 
---------------------------------------------
+
 ## Somes advices 
 
 Okay, all right! 
@@ -82,9 +82,9 @@ However, during the course of the game (*round by round*), you should listen to 
 
 4- And don’t forget that the **most important** thing is to have **fun**. It doesn’t matter if you lose, **you will progress**! *Just time and training...*
 
---------------------------------------------
+
 ## FAQ
 
---------------------------------------------
+
 ## Footnotes
 
