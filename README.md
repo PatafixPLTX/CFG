@@ -12,6 +12,7 @@ Plan
 * [Introdution](#introdution)
 * [Somes Advices](#somes-advices)
 * [FAQ](#faq)
+
 --------------------------------------------
 ## Presentation
 
@@ -20,7 +21,6 @@ My name is *Gaspard Lebaube* and I am with my **beautiful** colleague *Kamil Ley
 We would first like to thank some people who helped us for this project from time to time indirectly...
 
 We thank the creators:
-
 
 --------------------------------------------
 ## Introdution
