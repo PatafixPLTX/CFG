@@ -107,4 +107,4 @@ However, during the course of the game (*round by round*), you should listen to 
 ㅤ
 ## Footnotes
 
-### Gaspard Lebaube
+###### Gaspard Lebaube
