@@ -89,7 +89,8 @@ However, during the course of the game (*round by round*), you should listen to 
 
 > There are now 3 game modes: a normal mode, a ranked mode, and a mode that changes every week.
 
-= 
+
+
 
 - *"How to play online with friends?"*
 
