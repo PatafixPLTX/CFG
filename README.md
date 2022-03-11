@@ -112,7 +112,7 @@ However, during the course of the game (*round by round*), you should listen to 
 
 Good Luck
 
-#### Kamil Leys
+### Kamil Leys
 
 Javascript = God
 
