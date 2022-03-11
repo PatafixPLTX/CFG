@@ -85,6 +85,9 @@ However, during the course of the game (*round by round*), you should listen to 
 
 ## FAQ
 
+- "But how many game modes are there?"
+
+>>> There are now 3 game modes: a normal mode, a competitive mode, and a mode that changes every week.
 
 ## Footnotes
 
