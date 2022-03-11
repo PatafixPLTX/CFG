@@ -17,7 +17,7 @@ CFG is a version of the famous **Connect 4**. Only, a **gravity** system is adde
 ㅤ
 ## Acknowledgements
 
-My name is *Gaspard Lebaube* and I am with my **beautiful** colleague *Kamil Leys*. 
+My name is *Gaspard Lebaube* [^1] and I am with my **beautiful** colleague *Kamil Leys* [^2]. 
 
 We would first like to thank some people who helped us for this project from time to time indirectly...
 
@@ -98,8 +98,8 @@ However, during the course of the game (*round by round*), you should listen to 
 **-** *"How to play online with friends ?"*
 
 > **It is enough that one of the players has the gravity pass... You will also discover other small advantages...**
-ㅤ
-ㅤ
+
+
 **-** *"How can we support you ?"*
 
 > **You can just play our game. But if you want to help us financially, do not hesitate to take a serious step or a small item in the shop.**
@@ -107,3 +107,6 @@ However, during the course of the game (*round by round*), you should listen to 
 ㅤ
 ## Footnotes
 
+Gaspard Lebaube [^1] 
+
+Kamil Leys [^2]
