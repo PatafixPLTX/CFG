@@ -6,15 +6,16 @@ Today, we are proud to present our **new project**.
 CFG is a version of the famous **Connect 4**. Only, a **gravity** system is added... Instead of just playing, *why not break your head a little ?*
 
 --------------------------------------------
-Plan
+## Summary
 
-* [Presentation](#presentation)
+* [Acknowledgements](#acknowledgements)
 * [Introdution](#introdution)
 * [Somes Advices](#somes-advices)
 * [FAQ](#faq)
+* [Footet](#footer)
 
 --------------------------------------------
-## Presentation
+## Acknowledgements
 
 My name is *Gaspard Lebaube* and I am with my **beautiful** colleague *Kamil Leys*. 
 
@@ -83,4 +84,7 @@ However, during the course of the game (*round by round*), you should listen to 
 
 --------------------------------------------
 ## FAQ
+
+--------------------------------------------
+# Footer
 
