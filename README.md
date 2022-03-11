@@ -43,7 +43,7 @@ Well I know that there you find the game far too complicated, indeed it is so fa
 *We’re sure Earth... right?* 
 Good well, I must see revealed that there is **gravity**! No, it’s not a joke!
 
-So let’s resume... So there is a gravity that is naturally towards the **bottom** of the plateau... **IF YOU DON’T TURN IT OVER OF COURSE!!!** 
+So let’s resume... So there is a gravity that is naturally towards the **bottom** of the plateau... ***If you don't turn it over of course!!!*** 
 So the chips will go to the bottom of it...
 
 Now shift the gravity (which we will symbolize as a *line*) and put it in the **middle** of the tray. 
