@@ -89,14 +89,17 @@ However, during the course of the game (*round by round*), you should listen to 
 
 > **There are now 4 game modes: a normal mode, a local mode, a ranked mode, and a mode that changes every week.**
 
+
 **-** *"Are our banking and personal data safe ?"*
 
 > **Yes, you can trust us... We even share the code of our app on** [GitHub](https://github.com/PatafixPLTX/CFG) **! So you can see where your data goes !** 
 
+
 **-** *"How to play online with friends ?"*
 
 > **It is enough that one of the players has the gravity pass... You will also discover other small advantages...**
-
+ㅤ
+ㅤ
 **-** *"How can we support you ?"*
 
 > **You can just play our game. But if you want to help us financially, do not hesitate to take a serious step or a small item in the shop.**
