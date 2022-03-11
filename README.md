@@ -8,7 +8,7 @@ CFG is a version of the famous **Connect 4**. Only, a **gravity** system is adde
 --------------------------------------------
 plan
 
-* [Introdution] (#Introdution)
+* [Presentation] (#presentation)
 --------------------------------------------
 ## Presentation
 
