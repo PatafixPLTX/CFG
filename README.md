@@ -85,13 +85,13 @@ However, during the course of the game (*round by round*), you should listen to 
 
 ## FAQ
 
-- "*But how many game modes are there?*"
+- *"But how many game modes are there?"*
 
 > There are now 3 game modes: a normal mode, a ranked mode, and a mode that changes every week.
 
+= 
 
-
-- "*How to play online with friends?*"
+- *"How to play online with friends?"*
 
 > It is enough that one of the players has the gravity pass... You will also discover other small advantages...
 
