@@ -1,4 +1,4 @@
-# CFG
+# Connect Four Gravity
 
 Hey, guys, hey there ! 
 Today, we are proud to present our **new project**.
@@ -80,3 +80,8 @@ However, during the course of the game (*round by round*), you should listen to 
 3- If you have to leave the game **absolutely** or you are **sure** to lose, ***declare forfeit***, you will have 1 minute of exclusion **only** (you will benefit for your **fair play**). If you leave the game without forfeiting, you will have **10 minutes** of exclusion (in case of bad connection, **you can resume**).
 
 4- And don’t forget that the **most important** thing is to have **fun**. It doesn’t matter if you lose, **you will progress**! *Just time and training...*
+
+--------------------------------------------
+
+## FAQ
+
