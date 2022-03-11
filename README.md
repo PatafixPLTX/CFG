@@ -18,7 +18,7 @@ CFG is a version of the famous **Connect 4**. Only, a **gravity** system is adde
 ㅤ
 ## Acknowledgements
 
-My name is [Gaspard Lebaube](#gaspard-lebaube-:) and I am with my **beautiful** colleague [Kamil Leys](#kamil-leys-:). 
+My name is [Gaspard Lebaube](#gaspard-lebaube) and I am with my **beautiful** colleague [Kamil Leys](#kamil-leys). 
 
 We would first like to thank some people who helped us for this project from time to time indirectly...
 
@@ -108,12 +108,12 @@ However, during the course of the game (*round by round*), you should listen to 
 ㅤ
 ## Biography
 
-###### Gaspard Lebaube :
+###### Gaspard Lebaube
 
 Good Luck
 
-###### Kamil Leys :
+###### Kamil Leys
 
-
+Javascript = God
 
 ## Footnotes
