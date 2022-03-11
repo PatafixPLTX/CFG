@@ -12,7 +12,7 @@ CFG is a version of the famous **Connect 4**. Only, a **gravity** system is adde
 * [Introdution](#introdution)
 * [Somes Advices](#somes-advices)
 * [FAQ](#faq)
-* [Footer](#footer)
+* [Footnotes](#footnotes)
 
 --------------------------------------------
 ## Acknowledgements
@@ -86,5 +86,5 @@ However, during the course of the game (*round by round*), you should listen to 
 ## FAQ
 
 --------------------------------------------
-## Footer
+## Footnotes
 
