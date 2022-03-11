@@ -91,7 +91,7 @@ However, during the course of the game (*round by round*), you should listen to 
 
 **-** *"Are our banking and personal data safe ?"*
 
-> Yes, you can trust us... We even share the code of our app on GitHub! So you can see where your data goes! 
+> Yes, you can trust us... We even share the code of our app on [GitHub](https://github.com/PatafixPLTX/CFG) ! So you can see where your data goes ! 
 
 **-** *"How to play online with friends ?"*
 
