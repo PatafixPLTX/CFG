@@ -104,6 +104,7 @@ However, during the course of the game (*round by round*), you should listen to 
 **-** *"How can we support you ?"*
 
 > **You can just play our game. But if you want to help us financially, do not hesitate to take a serious step or a small item in the shop.**
+
 ㅤ
 More questions ? Ask them [here](https://github.com/PatafixPLTX/CFG/discussions) !
 ㅤ
