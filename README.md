@@ -26,43 +26,43 @@ We thank the creators:
 
 ## Introdution
 
-Here is our **beautiful** game :
+Here is our **beautiful** game:
 
 IMG
 
-Just a tray of 10x10 boxes...
+Just a tray of 10×10 boxes...
 Not much, yes, but **potential**...
 Okay, now, if I tell you there are chips, and... that’s it: a tray and chips... 
 
 It’s already a good base. *Who wants better?*
-Me?! I am indeed a bit demanding...
+Me ?! I am indeed a bit demanding...
 
-So maybe I’ll add some rules, huh? 
-There, as soon as you line up **4 chips**, you have **won**... But... It reminds me of a game... Of course not!
+So maybe I’ll add some rules, huh ? 
+There, as soon as you line up **4 chips**, you have **won**... But... It reminds me of a game... Of course not !
 
 Well I know that there you find the game far too complicated, indeed it is so far a *torture* for your brain... So watch out, it’ll get hot:
 
-*We’re sure Earth... right?* 
-Good well, I must see revealed that there is **gravity**! No, it’s not a joke!
+*We’re sure Earth... right ?* 
+Good well, I must see revealed that there is **gravity** ! No, it’s not a joke !
 
-So let’s resume... So there is a gravity that is naturally towards the **bottom** of the plateau... ***If you don't turn it over of course!!!*** 
+So let’s resume... So there is a gravity that is naturally towards the **bottom** of the plateau... **If you don't turn it over of course !!!** 
 So the chips will go to the bottom of it...
 
 Now shift the gravity (which we will symbolize as a *line*) and put it in the **middle** of the tray. 
 The chips that will be placed on **top** will land at this line... The tokens that will be placed at the **bottom**, will go back to the same line...
 
-But it’s not over! Hehe...
+But it’s not over ! Hehe...
 Now that we have our horizontal line, **add a vertical line...**
-The chips will be drawn to the **middle** of the board! 
+The chips will be drawn to the **middle** of the board ! 
 
-And you just have to assemble the gravity and the tray... and line up your **4 chips**! 
+And you just have to assemble the gravity and the tray... and line up your **4 chips** ! 
 
-Simple? Test it!
+Simple ? Test it !
 
 
 ## Somes advices 
 
-Okay, all right! 
+Okay, all right ! 
 You have finally understood the general purpose of the game. Now is the time to pay more **attention to it**. 
 
 At the beginning of a game, you will end up with 4 chips **already placed** (they are only used to start the game):
@@ -80,7 +80,7 @@ However, during the course of the game (*round by round*), you should listen to 
 
 3- If you have to leave the game **absolutely** or you are **sure** to lose, ***declare forfeit***, you will have 1 minute of exclusion **only** (you will benefit for your **fair play**). If you leave the game without forfeiting, you will have **10 minutes** of exclusion (in case of bad connection, **you can resume**).
 
-4- And don’t forget that the **most important** thing is to have **fun**. It doesn’t matter if you lose, **you will progress**! *Just time and training...*
+4- And don’t forget that the **most important** thing is to have **fun**. It doesn’t matter if you lose, **you will progress** ! *Just time and training...*
 
 
 ## FAQ
