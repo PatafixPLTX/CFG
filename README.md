@@ -87,7 +87,7 @@ However, during the course of the game (*round by round*), you should listen to 
 
 **-** *"But how many game modes are there ?"*
 
-> There are now 3 game modes: a normal mode, a ranked mode, and a mode that changes every week.
+> There are now 4 game modes: a normal mode, a local mode, a ranked mode, and a mode that changes every week.
 
 **-** *"How to play online with friends ?"*
 
