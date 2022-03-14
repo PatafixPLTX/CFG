@@ -29,7 +29,7 @@ We thank the creators:
 
 Here is our **beautiful** game:
 
-![Nothing on board](Example1.png)
+![Empty board 1](Example1.png)
 
 Just a tray of 10×10 boxes...
 Not much, yes, but **potential**...
@@ -68,7 +68,7 @@ You have finally understood the general purpose of the game. Now is the time to 
 
 At the beginning of a game, you will end up with 4 chips **already placed** (they are only used to start the game):
 
-IMG
+![Basic configuration](Example2.png)
 
 Afterwards, a pile or face is thrown (**honor** to the *smallest level* to choose its face).
 The winning player will be able to place their chip **first**.
