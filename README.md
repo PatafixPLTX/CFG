@@ -29,7 +29,7 @@ We thank the creators:
 
 Here is our **beautiful** game:
 
-IMG
+![Nothing on board](Example1.png)
 
 Just a tray of 10×10 boxes...
 Not much, yes, but **potential**...
