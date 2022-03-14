@@ -1,7 +1,8 @@
 # Releases file
 
- - [x] menu
- - [ ] game:  in release
+ - [x] sidebar
+ - [ ] game :  in release
  - [x] css
- - [ ] dactabase
+ - [ ] database
  - [ ] user configuration
+ - [ ] pages
