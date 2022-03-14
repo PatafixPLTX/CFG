@@ -1,8 +1,8 @@
 # Releases file
 
- - [x] sidebar
- - [ ] game :  in release
- - [x] css
- - [ ] database
- - [ ] user configuration
- - [ ] pages
+ - [x] Sidebar
+ - [ ] Game :  in release
+ - [x] Css
+ - [ ] Database
+ - [ ] User configuration
+ - [ ] Pages
