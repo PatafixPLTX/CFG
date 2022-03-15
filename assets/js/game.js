@@ -26,6 +26,8 @@ function drawEnemyCircle(posX, posY) {
 }
 
 $(document).ready(function () {
+    console.log($(window).height());
+    console.log($(window).width());
     canvas = document.createElement('canvas');
     canvas.width = 400;
     canvas.height = 400;
