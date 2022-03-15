@@ -1,3 +1,6 @@
+let contentCreation = null; // variable used when creating content in sub-pages
+let contentCreation2 = null;
+
 // BEGIN OF GAME VARIABLES
 let ctx = null;
 let canvasState = null;
