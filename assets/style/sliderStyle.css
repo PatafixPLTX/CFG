@@ -17,6 +17,7 @@
     overflow-x: visible;
     top: 8px;
     left: 5px;
+    font-size: initial;
   }
   
   .slider:hover {
