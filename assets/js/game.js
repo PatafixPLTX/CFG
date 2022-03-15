@@ -25,12 +25,19 @@ function drawEnemyCircle(posX, posY) {
     ctx.fill();
 }
 
+let calcCanvasSize = (windowWidth, windowHeight)=>{
+    if(windowHeight>windowWidth) this.size = windowWidth;
+    else                         this.size = windowHeight;
+    this.size *= preferredPercentageSize;
+    if(this.size>preferenceMaxCanvasSize) this.size = preferenceMaxCanvasSize;
+    if(this.size<preferenceMinCanvasSize) this.size = preferenceMinCanvasSize;
+    return this.size;
+};
+
 $(document).ready(function () {
-    console.log($(window).height());
-    console.log($(window).width());
     canvas = document.createElement('canvas');
-    canvas.width = 400;
-    canvas.height = 400;
+    canvas.width = calcCanvasSize($(window).width(), $(window).height());    
+    canvas.height = canvas.width;
     canvas.style = "z-index: 10;background: rgb(50,50,175);padding: 0;margin: auto;display: block;position: absolute;left:78px;right:0px;bottom:0px;top: 0px;border: 5px black solid;transition: all 0.5s ease;";
     document.body.appendChild(canvas);
     halfWidthCanvas = canvas.width / 2;
