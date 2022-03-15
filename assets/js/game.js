@@ -25,7 +25,7 @@ function drawEnemyCircle(posX, posY) {
     ctx.fill();
 }
 
-let calcCanvasSize = (windowWidth, windowHeight)=>{
+function calcCanvasSize(windowWidth, windowHeight){
     if(windowHeight>windowWidth) this.size = windowWidth;
     else                         this.size = windowHeight;
     this.size *= preferredPercentageSize;
