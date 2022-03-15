@@ -15,6 +15,7 @@
     -webkit-transition: .2s;
     transition: opacity .2s;
     overflow-x: visible;
+    margin: auto;
   }
   
   .slider:hover {
