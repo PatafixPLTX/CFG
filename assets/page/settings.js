@@ -1,1 +1,1 @@
-content.innerHTML = "<h1>Settings</h1>";
+content.innerHTML = '<h1>Settings</h1><style src="style/slidebarStyle.css"></style><div class="slidecontainer"><input type="range" min="1" max="100" value="50" class="slider" id="myRange"></div>';
