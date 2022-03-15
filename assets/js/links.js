@@ -5,7 +5,6 @@ let preferredPercentageSize = 0.7;
 // end of client data
 
 let contentCreation = null; // variable used when creating content in sub-pages
-let contentCreation2 = null;
 
 // BEGIN OF GAME VARIABLES
 let ctx = null;
