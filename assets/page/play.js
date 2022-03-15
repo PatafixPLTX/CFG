@@ -9,5 +9,6 @@ contentCreation2 = document.createElement("input");
 contentCreation2.type = "range";
 contentCreation2.min = "1";
 contentCreation2.max = "100";
-contentCreation2.style.width = "100%";
+contentCreation2.style.width = "90%";
+contentCreation2.style.height = "15px";
 contentCreation.appendChild(contentCreation2);
