@@ -28,6 +28,7 @@
     background: #04AA6D;
     opacity: 0.95;
     cursor: pointer;
+    overflow-x: visible;
   }
   
   .slider::-moz-range-thumb {
