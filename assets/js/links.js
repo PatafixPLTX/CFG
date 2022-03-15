@@ -1,3 +1,9 @@
+// client data
+let preferenceMaxCanvasSize = 600;
+let preferenceMinCanvasSize = 200;
+let preferredPercentageSize = 0.9;
+// end of client data
+
 let contentCreation = null; // variable used when creating content in sub-pages
 let contentCreation2 = null;
 
