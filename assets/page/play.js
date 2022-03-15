@@ -11,5 +11,5 @@ contentCreation2.min = "1";
 contentCreation2.max = "100";
 /*contentCreation2.style.width = "90%";
 contentCreation2.style.height = "15px";*/
-contentCreation2.style = "width: 100%;height: 15px;border-radius: 5px;background: #d3d3d3;outline: none;opacity: 0.7;";
+contentCreation2.style = "width: 100%;height: 50px;border-radius: 5px;background: #d3d3d3;outline: none;opacity: 0.7;";
 contentCreation.appendChild(contentCreation2);
