@@ -15,7 +15,7 @@
     -webkit-transition: .2s;
     transition: opacity .2s;
     overflow-x: visible;
-    margin: auto;
+    top: 15px;
   }
   
   .slider:hover {
@@ -25,8 +25,8 @@
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: #04AA6D;
     opacity: 0.95;
