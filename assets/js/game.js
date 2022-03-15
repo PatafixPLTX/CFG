@@ -31,6 +31,7 @@ let calcCanvasSize = (windowWidth, windowHeight)=>{
     this.size *= preferredPercentageSize;
     if(this.size>preferenceMaxCanvasSize) this.size = preferenceMaxCanvasSize;
     if(this.size<preferenceMinCanvasSize) this.size = preferenceMinCanvasSize;
+    this.size -= this.size%10;
     return this.size;
 };
 
