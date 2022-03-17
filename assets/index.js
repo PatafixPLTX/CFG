@@ -45,5 +45,5 @@ fs.readdir(path.join(__dirname, 'style'), function (err, files) {
 });
 
 app.listen(port, () => {
-    console.log(`CFG app listening on port ${port}`)
+    console.log(`CFG app listening on port ${port}`);
 });
