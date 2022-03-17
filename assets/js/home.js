@@ -22,4 +22,5 @@ $(document).ready(function () {
     ctx.beginPath();
     ctx.fillColor = "rgb(255,0,0);";
     ctx.rect(25,25,125,365);
+    ctx.fill();
 });
