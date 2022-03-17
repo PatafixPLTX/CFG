@@ -1,5 +1,5 @@
 function calcCanvasSize(windowWidth, windowHeight){
-    if(windowHeight>windowWidth) this.size = windowWidth;
+    if(windowHeight>windowWidth) this.size = windowWidth-250;
     else                         this.size = windowHeight;
     this.size *= preferredPercentageSize;
     if(this.size>preferenceMaxCanvasSize) this.size = preferenceMaxCanvasSize;
@@ -12,7 +12,7 @@ $(document).ready(function () {
     canvas = document.createElement('canvas');
     canvas.width = calcCanvasSize($(window).width()-250, $(window).height());    
     canvas.height = canvas.width;
-    canvas.style = "z-index: 10;background: transparent;padding: 0;margin: auto;display: block;position: absolute;left:78px;right:0px;bottom:0px;top: 0px;border: 5px black solid;transition: all 0.5s ease;";
+    canvas.style = "z-index: 10;background: transparent;padding: 0;margin: auto;display: block;position: absolute;left:78px;right:0px;bottom:0px;top: 0px;border: none;transition: all 0.5s ease;";
     document.body.appendChild(canvas);
     halfWidthCanvas = canvas.width / 2;
     halfHeigthCanvas = canvas.height / 2;

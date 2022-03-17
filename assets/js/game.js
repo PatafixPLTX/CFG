@@ -26,7 +26,7 @@ function drawEnemyCircle(posX, posY) {
 }
 
 function calcCanvasSize(windowWidth, windowHeight){
-    if(windowHeight>windowWidth) this.size = windowWidth;
+    if(windowHeight>windowWidth) this.size = windowWidth-250;
     else                         this.size = windowHeight;
     this.size *= preferredPercentageSize;
     if(this.size>preferenceMaxCanvasSize) this.size = preferenceMaxCanvasSize;
