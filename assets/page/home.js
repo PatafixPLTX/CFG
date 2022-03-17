@@ -1,1 +1,3 @@
-content.innerHTML = '<t>C</t><t class="collapse">onnect </t><t>F</t><t class="collapse">our </t><t>G</t><t class="collapse">ravity </t>';
+let _HomeScript = document.createElement("script");
+_HomeScript.src = "js/home.js";
+content.appendChild(_HomeScript);
