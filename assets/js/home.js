@@ -20,7 +20,7 @@ $(document).ready(function () {
     ctx = canvas.getContext("2d");
 
     ctx.beginPath();
-    ctx.fillColor = "rgb(255,0,0);";
+    ctx.fillColor = "rgb(0,255,125);";
     ctx.rect(25,25,125,365);
     ctx.fill();
 });
