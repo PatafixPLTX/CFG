@@ -1,0 +1,15 @@
+canvas {
+    z-index: 100;
+    background: rgb(50,50,175);
+    padding: 0;
+    margin: auto;
+    overflow-x: visible;
+    display: block;
+    position: absolute;
+    left: 78px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    border: 5px black solid;
+    transition: all 0.5s ease;
+}

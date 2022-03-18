@@ -1,3 +1,1 @@
-let _HomeScript = document.createElement("script");
-_HomeScript.src = "js/home.js";
-content.appendChild(_HomeScript);
+content.innerHTML = "<h1>Hello World!!</h1>"
