@@ -33,7 +33,7 @@
     border-radius: 50%;
     background: #04AA6D;
     opacity: 1;
-    cursor: e-resize ;
+    cursor: e-resize;
   }
   
   .slider::-moz-range-thumb {
