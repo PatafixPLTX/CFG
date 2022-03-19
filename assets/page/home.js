@@ -1,1 +1,12 @@
-content.innerHTML = "<h1>Hello World!!</h1>"
+content.innerHTML = ```<div class="title">
+<!-- 80% -->
+
+<h1>Connect Four Gravity</h1>
+
+</div>
+<div class="text">
+<!-- 95% -->
+
+<p>Je suis un texte...</p>
+
+</div>```

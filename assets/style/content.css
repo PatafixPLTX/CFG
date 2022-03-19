@@ -20,5 +20,14 @@
   color: #F5F5F5;
   font-size: 25px;
   font-weight: 500;
-  margin: 18px
+  margin: 18px;
+  width: 95%;
+}
+.content .title{
+  width: 80%;
+  display: inline-block;
+  color: #F5F5F5;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 50px;
 }
