@@ -49,6 +49,7 @@ $(document).ready(function () {
     halfHeigthCanvas = canvas.height / 2;
 
     canvas.addEventListener("mousemove", mouseMove);
+    canvas.addEventListener("mouseout", mouseOut);
 
     ctx = canvas.getContext("2d");
 
@@ -60,7 +61,7 @@ $(document).ready(function () {
 function drawPions() {
     for (let i = 0; i < 10; i++) {
         for (let j = 0; j < 10; j++) {
-            ctx.clearRect(i * oneOnTenWidth + 2, j * oneOnTenHeigth + 2, oneOnTenWidth - 4, oneOnTenHeigth - 4);
+            eraseCase(i,j);
             switch (canvasState[i][j]) {
                 case 1:
                     drawYourCircle(i, j);
@@ -71,6 +72,10 @@ function drawPions() {
             }
         }
     }
+}
+
+function eraseCase(posX,posY){
+    ctx.clearRect(posX * oneOnTenWidth + 2, posY * oneOnTenHeigth + 2, oneOnTenWidth - 4, oneOnTenHeigth - 4);
 }
 
 function mouseMove(event) {
@@ -85,9 +90,9 @@ function mouseMove(event) {
             if (currentCase[0] > 10) currentCase[0] = 10;
             if (currentCase[1] > 10) currentCase[1] = 10;
             if (currentCase != lastCase) {
-                canvasState[lastCase[0] - 1][lastCase[1] - 1] = 0;
-                canvasState[currentCase[0] - 1][currentCase[1] - 1] = 1;
-                drawPions();
+                aim();
+                eraseCase(lastCase[0]-1,lastCase[1]-1);
+                drawYourCircle(currentCase[0]-1, currentCase[1]-1);
                 lastCase[0] = currentCase[0];
                 lastCase[1] = currentCase[1];
             }
@@ -97,12 +102,22 @@ function mouseMove(event) {
     }
 }
 
-function aim() {
-
+function mouseOut(){
+    eraseCase(lastCase[0]-1, lastCase[1]-1);
+    lastCase = [-1,-1];
 }
 
-function determineNextCase() {
+function aim() {
+    if(canvasState[currentCase[0], currentCase[1]]){
+        determineNextCase(1);
+        aim();
+    }
+}
 
+function determineNextCase(direction) {
+    if(direction==1){
+
+    }
 }
 
 function drawGrille() {
