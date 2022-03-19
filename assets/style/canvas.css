@@ -13,3 +13,16 @@ canvas {
     border: 5px black solid;
     transition: all 0.5s ease;
 }
+
+  .sidebar.open ~ canvas{
+    left: 250px;
+  }
+  
+  @media screen and (maw-width: 600px){
+    canvas{
+        left: 78px;
+    }
+    .sidebar.open ~ canvas{
+        left: 78px;
+    }
+  }
