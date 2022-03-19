@@ -27,6 +27,9 @@
 .content .title{
   margin: 0;padding: 0;
   width: 100%;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
   display: inline-block;
   color: #F5F5F5;
   font-size: 30px;
