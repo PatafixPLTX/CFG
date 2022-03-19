@@ -108,16 +108,42 @@ function mouseOut(){
 }
 
 function aim() {
+    // teste si il y a déjà un objet dans la case, et si oui, déplace le pion en diagonale vers l'éxterieur
     if(canvasState[currentCase[0], currentCase[1]]){
+        if(outside()) return "Error 404";
         determineNextCase(1);
-        aim();
+        return aim();
     }
+    // teste les différentes directions pour déplacer le pion
+    if(determineNextCase(0)) return aim();
+    return true;
 }
 
 function determineNextCase(direction) {
-    if(direction==1){
-
+    if(direction == 1){
+        return direction(0);
+    }else{
+        switch(direction(1)){
+            
+        }
     }
+}
+
+function direction(dir){
+    switch(dir){
+        case 0:
+            if(currentCase[0]>5) currentCase[0] += 1;
+            else                 currentCase[0] -= 1;
+            if(currentCase[1]>5) currentCase[1] += 1;
+            else                 currentCase[1] -= 1;
+            break;
+    }
+    return true;
+}
+
+function outside(){
+    if(currentCase[0]>10 || currentCase[0]<1 || currentCase[1]>10 || currentCase[1]<1) return 1;
+    return 0;
 }
 
 function drawGrille() {
