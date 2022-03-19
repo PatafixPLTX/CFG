@@ -12,7 +12,7 @@ let canvasState = null;
 
 let currentMouseOver = [-100, -100];
 let currentCase = [-1, -1];
-let lastCase = [1, 1];
+let lastCase = [-1, -1];
 let yourTurn = true;
 
 let oneOnTenHeigth = null;
