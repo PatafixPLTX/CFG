@@ -13,37 +13,37 @@ app.get('/', (req, res) => {
 });
 
 fs.readdir(path.join(__dirname, 'img'), function (err, files) {
-    if(err) return console.log("Error: "+err);
-    files.forEach((file)=>{
-        app.get('/img/'+file, (req, res) => {
-            res.sendFile(path.join(__dirname, 'img/'+file));
+    if (err) return console.log("Error: " + err);
+    files.forEach((file) => {
+        app.get('/img/' + file, (req, res) => {
+            res.sendFile(path.join(__dirname, 'img/' + file));
         });
     });
 });
 
 fs.readdir(path.join(__dirname, 'js'), function (err, files) {
-    if(err) return console.log("Error: "+err);
-    files.forEach((file)=>{
-        app.get('/js/'+file, (req, res) => {
-            res.sendFile(path.join(__dirname, 'js/'+file));
+    if (err) return console.log("Error: " + err);
+    files.forEach((file) => {
+        app.get('/js/' + file, (req, res) => {
+            res.sendFile(path.join(__dirname, 'js/' + file));
         });
     });
 });
 
 fs.readdir(path.join(__dirname, 'page'), function (err, files) {
-    if(err) return console.log("Error: "+err);
-    files.forEach((file)=>{
-        app.get('/page/'+file, (req, res) => {
-            res.sendFile(path.join(__dirname, 'page/'+file));
+    if (err) return console.log("Error: " + err);
+    files.forEach((file) => {
+        app.get('/page/' + file, (req, res) => {
+            res.sendFile(path.join(__dirname, 'page/' + file));
         });
     });
 });
 
 fs.readdir(path.join(__dirname, 'style'), function (err, files) {
-    if(err) return console.log("Error: "+err);
-    files.forEach((file)=>{
-        app.get('/style/'+file, (req, res) => {
-            res.sendFile(path.join(__dirname, 'style/'+file));
+    if (err) return console.log("Error: " + err);
+    files.forEach((file) => {
+        app.get('/style/' + file, (req, res) => {
+            res.sendFile(path.join(__dirname, 'style/' + file));
         });
     });
 });
@@ -60,14 +60,26 @@ const mySql = require("mysql");
 const db = mySql.createConnection({
 
     host: "localhost",
- 
-    user: "root",
- 
-    password: ""
- 
-  });
 
-  db.connect(function(err) {
+    user: "root",
+
+    password: ""
+
+});
+
+db.connect(function (err) {
     if (err) console.log(err);
     console.log("Connecté à la base de données MySQL!");
-  });
+});
+
+const WebSocket = require('ws')
+const wss = new WebSocket.Server({ port: 8080 })
+
+
+wss.on('connection', ws => {
+    console.log('connection established');
+    ws.on('message', message => {
+        console.log('Received message =& gt; </span ><span style="color:#e6db74">${</span><span style="color:#a6e22e">message</span><span style="color:#e6db74">}</span><span style="color:#e6db74">');
+    });
+    ws.send('ho!');
+});

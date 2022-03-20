@@ -1,3 +1,18 @@
+const url = 'ws://localhost/';
+const connection = new WebSocket(url);
+
+connection.onopen = () => {
+  connection.send('hey');
+}
+
+connection.onerror = (error) => {
+  console.log(error);
+}
+
+connection.onmessage = (e) => {
+  console.log(e.data);
+}
+
 canvasState = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
