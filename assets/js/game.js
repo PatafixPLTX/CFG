@@ -124,7 +124,11 @@ function determineNextCase(direction) {
         return direction(0);
     }else{
         switch(direction(1)){
-            
+            case 0:
+                if(tryMove(1,1)) return aim();
+                if(tryMove(1,0)) return aim();
+                if(tryMove(0,1)) return aim();
+                return true;
         }
     }
 }
@@ -137,6 +141,11 @@ function direction(dir){
             if(currentCase[1]>5) currentCase[1] += 1;
             else                 currentCase[1] -= 1;
             break;
+        case 1:
+            if(currentCase[0]<6 && currentCase[1]<6) return 0;
+            if(currentCase[0]>6 && currentCase[1]<6) return 1;
+            if(currentCase[0]<6 && currentCase[1]>6) return 2;
+            return 3;
     }
     return true;
 }

@@ -1,3 +1,7 @@
+/** Server static pages transmission part
+ * 
+ */
+
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
@@ -47,3 +51,23 @@ fs.readdir(path.join(__dirname, 'style'), function (err, files) {
 app.listen(port, () => {
     console.log(`CFG app listening on port ${port}`);
 });
+
+/** Game data handling part
+ * 
+ */
+const mySql = require("mysql");
+
+const db = mySql.createConnection({
+
+    host: "localhost",
+ 
+    user: "root",
+ 
+    password: ""
+ 
+  });
+
+  db.connect(function(err) {
+    if (err) console.log(err);
+    console.log("Connecté à la base de données MySQL!");
+  });
