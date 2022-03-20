@@ -61,7 +61,7 @@ $(document).ready(function () {
 function drawPions() {
     for (let i = 0; i < 10; i++) {
         for (let j = 0; j < 10; j++) {
-            eraseCase(i,j);
+            eraseCase(i, j);
             switch (canvasState[i][j]) {
                 case 1:
                     drawYourCircle(i, j);
@@ -74,7 +74,7 @@ function drawPions() {
     }
 }
 
-function eraseCase(posX,posY){
+function eraseCase(posX, posY) {
     ctx.clearRect(posX * oneOnTenWidth + 2, posY * oneOnTenHeigth + 2, oneOnTenWidth - 4, oneOnTenHeigth - 4);
 }
 
@@ -90,11 +90,12 @@ function mouseMove(event) {
             if (currentCase[0] > 10) currentCase[0] = 10;
             if (currentCase[1] > 10) currentCase[1] = 10;
             if (currentCase != lastCase) {
-                aim();
-                eraseCase(lastCase[0]-1,lastCase[1]-1);
-                drawYourCircle(currentCase[0]-1, currentCase[1]-1);
-                lastCase[0] = currentCase[0];
-                lastCase[1] = currentCase[1];
+                if (aim()) {
+                    eraseCase(lastCase[0] - 1, lastCase[1] - 1);
+                    drawYourCircle(currentCase[0] - 1, currentCase[1] - 1);
+                    lastCase[0] = currentCase[0];
+                    lastCase[1] = currentCase[1];
+                }
             }
         }
     } else {
@@ -102,57 +103,78 @@ function mouseMove(event) {
     }
 }
 
-function mouseOut(){
-    eraseCase(lastCase[0]-1, lastCase[1]-1);
-    lastCase = [-1,-1];
+function mouseOut() {
+    eraseCase(lastCase[0] - 1, lastCase[1] - 1);
+    lastCase = [-1, -1];
 }
 
 function aim() {
     // teste si il y a déjà un objet dans la case, et si oui, déplace le pion en diagonale vers l'éxterieur
-    if(canvasState[currentCase[0], currentCase[1]]){
-        if(outside()) return "Error 404";
+    if (canvasState[currentCase[0], currentCase[1]]) {
+        if (outside()) return false;
         determineNextCase(1);
         return aim();
     }
     // teste les différentes directions pour déplacer le pion
-    if(determineNextCase(0)) return aim();
+    if (determineNextCase(0)) return aim();
     return true;
 }
 
-function determineNextCase(direction) {
-    if(direction == 1){
+function determineNextCase(directionVal) {
+    if (directionVal == 1) {
         return direction(0);
-    }else{
-        switch(direction(1)){
-            case 0:
-                if(tryMove(1,1)) return aim();
-                if(tryMove(1,0)) return aim();
-                if(tryMove(0,1)) return aim();
-                return true;
-        }
+    }
+    switch (direction(1)) {
+        case 0:
+            if (tryMove(1, 1)) return aim();
+            if (currentCase[0] > 4) { if (tryMove(1, 0)) return aim() }
+            if (currentCase[1] > 4) { if (tryMove(0, 1)) return aim() }
+            return false;
+        case 1:
+            if (tryMove(-1, 1)) return aim();
+            if (currentCase[0] < 7) { if (tryMove(-1, 0)) return aim() }
+            if (currentCase[1] > 4) { if (tryMove(0, 1)) return aim() }
+            return false;
+        case 1:
+            if (tryMove(1, -1)) return aim();
+            if (currentCase[0] > 4) { if (tryMove(1, 0)) return aim() }
+            if (currentCase[1] < 7) { if (tryMove(0, -1)) return aim() }
+            return false;
+        case 1:
+            if (tryMove(-1, -1)) return aim();
+            if (currentCase[0] < 7) { if (tryMove(-1, 0)) return aim() }
+            if (currentCase[1] < 7) { if (tryMove(0, -1)) return aim() }
+            return false;
     }
 }
 
-function direction(dir){
-    switch(dir){
+function direction(dir) {
+    switch (dir) {
         case 0:
-            if(currentCase[0]>5) currentCase[0] += 1;
-            else                 currentCase[0] -= 1;
-            if(currentCase[1]>5) currentCase[1] += 1;
-            else                 currentCase[1] -= 1;
+            if (currentCase[0] > 5) currentCase[0] += 1;
+            else currentCase[0] -= 1;
+            if (currentCase[1] > 5) currentCase[1] += 1;
+            else currentCase[1] -= 1;
             break;
         case 1:
-            if(currentCase[0]<6 && currentCase[1]<6) return 0;
-            if(currentCase[0]>6 && currentCase[1]<6) return 1;
-            if(currentCase[0]<6 && currentCase[1]>6) return 2;
+            if (currentCase[0] < 6 && currentCase[1] < 6) return 0;
+            if (currentCase[0] > 6 && currentCase[1] < 6) return 1;
+            if (currentCase[0] < 6 && currentCase[1] > 6) return 2;
             return 3;
     }
     return true;
 }
 
-function outside(){
-    if(currentCase[0]>10 || currentCase[0]<1 || currentCase[1]>10 || currentCase[1]<1) return 1;
+function outside() {
+    if (currentCase[0] > 10 || currentCase[0] < 1 || currentCase[1] > 10 || currentCase[1] < 1) return 1;
     return 0;
+}
+
+function tryMove(dirX, dirY) {
+    if (canvasState[currentCase[0] + dirX, currentCase[1] + dirY]) return false;
+    currentCase[0] += dirX;
+    currentCase[1] += dirY;
+    return true;
 }
 
 function drawGrille() {
