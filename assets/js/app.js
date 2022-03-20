@@ -10,18 +10,8 @@ closeBtn.addEventListener("click", () => {
 function menuBtnChange() {
     if (sidebar.classList.contains("open")) {
         closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the icons class
-        try {
-            canvas.style.left = "250px";
-        } catch (error) {
-            console.log(error);
-        }
     } else {
         closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the icons class
-        try {
-            canvas.style.left = "78px";
-        } catch (error) {
-            console.log(error);
-        }
     }
 }
 
