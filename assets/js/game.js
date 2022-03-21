@@ -104,12 +104,19 @@ function mouseMove(event) {
             if (currentCase[1] < 1) currentCase[1] = 1;
             if (currentCase[0] > 10) currentCase[0] = 10;
             if (currentCase[1] > 10) currentCase[1] = 10;
-            if (currentCase != lastCase) {
+            if (currentCase[0] != lastCase[0] || currentCase[1] != lastCase[1]) {
+                console.log(`current2:${currentCase[0]}`);
+                console.log(`last2:${lastCase[0]}`);
+                currentCaseCopy[0] = currentCase[0];
+                currentCaseCopy[1] = currentCase[1];
+                eraseCase(lastCase[0] - 1, lastCase[1] - 1);
+                lastCase[0] = currentCase[0];
+                lastCase[1] = currentCase[1];
                 if (aim()) {
-                    eraseCase(lastCase[0] - 1, lastCase[1] - 1);
-                    drawYourCircle(currentCase[0] - 1, currentCase[1] - 1);
-                    lastCase[0] = currentCase[0];
-                    lastCase[1] = currentCase[1];
+                    console.log("move circle");
+                    drawYourCircle(currentCaseCopy[0] - 1, currentCaseCopy[1] - 1);
+                    lastCaseCopy[0] = currentCaseCopy[0];
+                    lastCaseCopy[1] = currentCaseCopy[1];
                 }
             }
         }
@@ -125,7 +132,7 @@ function mouseOut() {
 
 function aim() {
     // teste si il y a déjà un objet dans la case, et si oui, déplace le pion en diagonale vers l'éxterieur
-    if (canvasState[currentCase[0], currentCase[1]]) {
+    if (canvasState[currentCaseCopy[0], currentCaseCopy[1]]!=0) {
         if (outside()) return false;
         determineNextCase(1);
         return aim();
@@ -142,23 +149,23 @@ function determineNextCase(directionVal) {
     switch (direction(1)) {
         case 0:
             if (tryMove(1, 1)) return aim();
-            if (currentCase[0] > 4) { if (tryMove(1, 0)) return aim() }
-            if (currentCase[1] > 4) { if (tryMove(0, 1)) return aim() }
+            if (currentCaseCopy[0] > 4) { if (tryMove(1, 0)) return aim() }
+            if (currentCaseCopy[1] > 4) { if (tryMove(0, 1)) return aim() }
             return false;
         case 1:
             if (tryMove(-1, 1)) return aim();
-            if (currentCase[0] < 7) { if (tryMove(-1, 0)) return aim() }
-            if (currentCase[1] > 4) { if (tryMove(0, 1)) return aim() }
+            if (currentCaseCopy[0] < 7) { if (tryMove(-1, 0)) return aim() }
+            if (currentCaseCopy[1] > 4) { if (tryMove(0, 1)) return aim() }
             return false;
         case 1:
             if (tryMove(1, -1)) return aim();
-            if (currentCase[0] > 4) { if (tryMove(1, 0)) return aim() }
-            if (currentCase[1] < 7) { if (tryMove(0, -1)) return aim() }
+            if (currentCaseCopy[0] > 4) { if (tryMove(1, 0)) return aim() }
+            if (currentCaseCopy[1] < 7) { if (tryMove(0, -1)) return aim() }
             return false;
         case 1:
             if (tryMove(-1, -1)) return aim();
-            if (currentCase[0] < 7) { if (tryMove(-1, 0)) return aim() }
-            if (currentCase[1] < 7) { if (tryMove(0, -1)) return aim() }
+            if (currentCaseCopy[0] < 7) { if (tryMove(-1, 0)) return aim() }
+            if (currentCaseCopy[1] < 7) { if (tryMove(0, -1)) return aim() }
             return false;
     }
 }
@@ -166,29 +173,29 @@ function determineNextCase(directionVal) {
 function direction(dir) {
     switch (dir) {
         case 0:
-            if (currentCase[0] > 5) currentCase[0] += 1;
+            if (currentCaseCopy[0] > 5) currentCase[0] += 1;
             else currentCase[0] -= 1;
-            if (currentCase[1] > 5) currentCase[1] += 1;
+            if (currentCaseCopy[1] > 5) currentCase[1] += 1;
             else currentCase[1] -= 1;
             break;
         case 1:
-            if (currentCase[0] < 6 && currentCase[1] < 6) return 0;
-            if (currentCase[0] > 6 && currentCase[1] < 6) return 1;
-            if (currentCase[0] < 6 && currentCase[1] > 6) return 2;
+            if (currentCaseCopy[0] < 6 && currentCaseCopy[1] < 6) return 0;
+            if (currentCaseCopy[0] > 6 && currentCaseCopy[1] < 6) return 1;
+            if (currentCaseCopy[0] < 6 && currentCaseCopy[1] > 6) return 2;
             return 3;
     }
     return true;
 }
 
 function outside() {
-    if (currentCase[0] > 10 || currentCase[0] < 1 || currentCase[1] > 10 || currentCase[1] < 1) return 1;
+    if (currentCaseCopy[0] > 10 || currentCaseCopy[0] < 1 || currentCaseCopy[1] > 10 || currentCaseCopy[1] < 1) return 1;
     return 0;
 }
 
 function tryMove(dirX, dirY) {
-    if (canvasState[currentCase[0] + dirX, currentCase[1] + dirY]) return false;
-    currentCase[0] += dirX;
-    currentCase[1] += dirY;
+    if (canvasState[currentCaseCopy[0] + dirX, currentCaseCopy[1] + dirY]) return false;
+    currentCaseCopy[0] += dirX;
+    currentCaseCopy[1] += dirY;
     return true;
 }
 
