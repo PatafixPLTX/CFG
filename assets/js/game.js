@@ -1,6 +1,3 @@
-const url = 'ws://localhost/';
-const connection = new WebSocket(url);
-
 connection.onopen = () => {
   connection.send('hey');
 }
