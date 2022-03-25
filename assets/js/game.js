@@ -1,5 +1,10 @@
+// Websocket data
+url = 'ws://localhost:8080/';
+connection = new WebSocket(url);
+
 connection.onopen = () => {
-  connection.send('hey');
+  connection.send('Holla');
+  console.log("server connection started succesfully");
 }
 
 connection.onerror = (error) => {

@@ -1,6 +1,5 @@
-// Websocket data
-const url = 'ws://localhost:8080/';
-const connection = new WebSocket(url);
+let url;
+let connection;
 
 // client data
 let preferenceMaxCanvasSize = 600;
