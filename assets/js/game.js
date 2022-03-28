@@ -1,10 +1,15 @@
 // Websocket data
+// send data to server with clientId+'/'+data+';'
+let clientId = null;
+let currentGameId = null;
+
 url = 'ws://localhost:8080/';
 connection = new WebSocket(url);
 
 connection.onopen = () => {
   connection.send('Holla');
   console.log("server connection started succesfully");
+  send("clicked:5!4");
 }
 
 connection.onerror = (error) => {
@@ -13,6 +18,11 @@ connection.onerror = (error) => {
 
 connection.onmessage = (e) => {
   console.log(e.data);
+}
+
+function send(data) {
+    let message = `${clientId},${clientId}/${data};`;
+    connection.send(message);
 }
 
 canvasState = [
@@ -45,9 +55,9 @@ function drawEnemyCircle(posX, posY) {
 function calcCanvasSize(windowWidth, windowHeight) {
     if (windowHeight > windowWidth) this.size = windowWidth - 250;
     else this.size = windowHeight;
-    this.size *= preferredPercentageSize;
     if (this.size > preferenceMaxCanvasSize) this.size = preferenceMaxCanvasSize;
     if (this.size < preferenceMinCanvasSize) this.size = preferenceMinCanvasSize;
+    this.size *= preferredPercentageSize;
     this.size -= this.size % 10;
     return this.size;
 };

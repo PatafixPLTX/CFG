@@ -79,7 +79,7 @@ const wss = new WebSocket.Server({ port: 8080 })
 wss.on('connection', ws => {
     console.log("connection ready");
     ws.on('message', message => {
-        console.log("message received");
+        console.log("message received:" + message);
     });
     ws.send('ho!');
 });
