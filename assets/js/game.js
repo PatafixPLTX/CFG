@@ -1,5 +1,5 @@
 // Websocket data
-// send data to server with clientId+'/'+data+';'
+// send data to server
 let clientId = null;
 let currentGameId = null;
 
@@ -7,9 +7,8 @@ url = 'ws://localhost:8080/';
 connection = new WebSocket(url);
 
 connection.onopen = () => {
-  connection.send('Holla');
   console.log("server connection started succesfully");
-  send("clicked:5!4");
+  send("ping", "Connection test");
 }
 
 connection.onerror = (error) => {
@@ -20,9 +19,12 @@ connection.onmessage = (e) => {
   console.log(e.data);
 }
 
-function send(data) {
-    let message = `${clientId},${clientId}/${data};`;
-    connection.send(message);
+function send(_type, _data) {
+    let message = {type: _type, data: _data, client: clientId, game: currentGameId};
+    let json = JSON.stringify(message);
+    connection.send(json);
+    console.log(json);
+    console.log(typeof json);
 }
 
 canvasState = [

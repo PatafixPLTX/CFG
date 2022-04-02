@@ -68,18 +68,31 @@ const db = mySql.createConnection({
 });
 
 db.connect(function (err) {
-    if (err) console.log(err);
+    if (err) return console.log(err);
     console.log("Connecté à la base de données MySQL!");
 });
 
-const WebSocket = require('ws')
-const wss = new WebSocket.Server({ port: 8080 })
+const WebSocket = require('ws');
+const wss = new WebSocket.Server({ port: 8080 });
+let ws = null;
 
-
-wss.on('connection', ws => {
+wss.on('connection', wsArg => {
+    ws = wsArg;
     console.log("connection ready");
     ws.on('message', message => {
-        console.log("message received:" + message);
+        //received json message that we convert to object
+        console.log("message: ");
+        console.log(message);
+        console.log("\n");
+        let data = JSON.parse(message);
+        if (data.type == "ping") {
+            send("pong", data.data);
+        }
     });
-    ws.send('ho!');
 });
+
+function send(_type, _data) {
+    let message = { type: _type, data: _data };
+    let json = JSON.stringify(message);
+    ws.send(json);
+}
