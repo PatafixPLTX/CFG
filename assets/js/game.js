@@ -16,7 +16,8 @@ connection.onerror = (error) => {
 }
 
 connection.onmessage = (e) => {
-  console.log(e.data);
+  this.message = JSON.parse(e.data);
+  console.log(this.message);
 }
 
 function send(_type, _data) {
