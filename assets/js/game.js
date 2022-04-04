@@ -1,8 +1,5 @@
 // Websocket data
 // send data to server
-let clientId = null;
-let currentGameId = null;
-
 url = 'ws://localhost:8080/';
 connection = new WebSocket(url);
 
@@ -42,17 +39,13 @@ canvasState = [
 ];
 
 function drawYourCircle(posX, posY) {
-    ctx.beginPath();
-    ctx.fillStyle = "yellow";
-    ctx.arc(posX * oneOnTenWidth + oneOnTenWidth / 2, posY * oneOnTenHeigth + oneOnTenHeigth / 2, oneOnTenHeigth / 2 - 4, 0, 2 * Math.PI, false);
-    ctx.fill();
+    // draw image from img/piont_blue.png
+    ctx.drawImage(yourPion, posX * oneOnTenWidth + 2, posY * oneOnTenHeigth + 2, oneOnTenWidth - 4, oneOnTenHeigth - 4);
 }
 
 function drawEnemyCircle(posX, posY) {
-    ctx.beginPath();
-    ctx.fillStyle = "red";
-    ctx.arc(posX * oneOnTenWidth + oneOnTenWidth / 2, posY * oneOnTenHeigth + oneOnTenHeigth / 2, oneOnTenHeigth / 2 - 4, 0, 2 * Math.PI, false);
-    ctx.fill();
+     // draw image from img/piont_red.png
+     ctx.drawImage(enemyPion, posX * oneOnTenWidth + 2, posY * oneOnTenHeigth + 2, oneOnTenWidth - 4, oneOnTenHeigth - 4);
 }
 
 function calcCanvasSize(windowWidth, windowHeight) {
@@ -69,15 +62,33 @@ $(document).ready(function () {
     canvas = document.createElement('canvas');
     canvas.width = calcCanvasSize($(window).width() - 250, $(window).height());
     canvas.height = canvas.width;
+    canvas.style.display = "none";
     contentCreation = document.createElement("link");
     contentCreation.rel = "stylesheet";
     contentCreation.type = "text/css";
     contentCreation.href = "style/canvas.css";
     content.appendChild(contentCreation);
     document.body.appendChild(canvas);
+    contentCreation = document.createElement("img");
+    contentCreation.src = "img/piont_blue.png";
+    contentCreation.id = "yourPion";
+    contentCreation.style.display = "none";
+    content.appendChild(contentCreation);
+    yourPion = document.getElementById("yourPion");
+    contentCreation = document.createElement("img");
+    contentCreation.src = "img/piont_red.png";
+    contentCreation.id = "enemyPion";
+    contentCreation.style.display = "none";
+    content.appendChild(contentCreation);
+    enemyPion = document.getElementById("enemyPion");
     halfWidthCanvas = canvas.width / 2;
     halfHeigthCanvas = canvas.height / 2;
 
+    setTimeout(begin, 250);
+});
+
+function begin() {
+    canvas.style.display = "block";
     canvas.addEventListener("mousemove", mouseMove);
     canvas.addEventListener("mouseout", mouseOut);
 
@@ -86,7 +97,7 @@ $(document).ready(function () {
     drawGrille();
 
     drawPions();
-});
+}
 
 function drawPions() {
     for (let i = 0; i < 10; i++) {
