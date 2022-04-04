@@ -1,5 +1,8 @@
 let url;
 let connection;
+let clientId = null;
+let currentGameId = null;
+let yourPion, enemyPion;
 
 // client data
 let preferenceMaxCanvasSize = 600;
