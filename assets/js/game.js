@@ -138,11 +138,14 @@ function mouseMove(event) {
                 eraseCase(lastCase[0] - 1, lastCase[1] - 1);
                 lastCase[0] = currentCase[0];
                 lastCase[1] = currentCase[1];
-                if (aim()) {
+                let aimVar = aim();
+                if (aimVar == 1) {
                     console.log("move circle");
                     drawYourCircle(currentCaseCopy[0] - 1, currentCaseCopy[1] - 1);
                     lastCaseCopy[0] = currentCaseCopy[0];
                     lastCaseCopy[1] = currentCaseCopy[1];
+                }else{
+                    console.error(("Pion cannot be placed here"))
                 }
             }
         }
@@ -156,7 +159,7 @@ function mouseOut() {
     lastCase = [-1, -1];
 }
 
-
+function aim()
 
 function drawGrille() {
     ctx.beginPath();
