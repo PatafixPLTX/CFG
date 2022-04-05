@@ -33,7 +33,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CFG - Official</title>
 
-    <script src="auth/auth_phone_signin.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyDmgdNV5TRXXt9kvrBWrT5hR0uw95t3Zec",
+            authDomain: "cfg-login.firebaseapp.com",
+            projectId: "cfg-login",
+            storageBucket: "cfg-login.appspot.com",
+            messagingSenderId: "913790320072",
+            appId: "1:913790320072:web:155db59c60c2517f4bd4fd",
+            measurementId: "G-0WQVYM2RJS"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+    <script src="auth/auth_phone_signin.js" type="module"></script>
 
 </head>
 
@@ -556,7 +579,8 @@
                     <option value="+499">+499</option>
                     <option value="+500">+500</option>
                 </select>
-                <input type="tel" name="phone" placeholder="Phone number" minlength="9" maxlength="10" pattern="s*[1-9]">
+                <input type="tel" name="phone" placeholder="Phone number" minlength="9" maxlength="10"
+                    pattern="s*[1-9]">
             </div>
             <input id="jesuisunbouton" type="submit" value="Login">
 
@@ -599,4 +623,5 @@
     </footer>
 
 </body>
+
 </html>

@@ -5,7 +5,7 @@
 // 'npm run snippets'.
 
 // [START auth_phone_signin_modular]
-import { getAuth, signInWithPhoneNumber } from "firebase/auth";
+import { getAuth, signInWithPhoneNumber } from "/firebase/auth";
 
 const phoneNumber = getPhoneNumberFromUserInput();
 const appVerifier = window.recaptchaVerifier;
