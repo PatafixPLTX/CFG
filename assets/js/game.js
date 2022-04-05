@@ -156,74 +156,7 @@ function mouseOut() {
     lastCase = [-1, -1];
 }
 
-function aim() {
-    // teste si il y a déjà un objet dans la case, et si oui, déplace le pion en diagonale vers l'éxterieur
-    if (canvasState[currentCaseCopy[0], currentCaseCopy[1]]!=0) {
-        if (outside()) return false;
-        determineNextCase(1);
-        return aim();
-    }
-    // teste les différentes directions pour déplacer le pion
-    if (determineNextCase(0)) return aim();
-    return true;
-}
 
-function determineNextCase(directionVal) {
-    if (directionVal == 1) {
-        return direction(0);
-    }
-    switch (direction(1)) {
-        case 0:
-            if (tryMove(1, 1)) return aim();
-            if (currentCaseCopy[0] > 4) { if (tryMove(1, 0)) return aim() }
-            if (currentCaseCopy[1] > 4) { if (tryMove(0, 1)) return aim() }
-            return false;
-        case 1:
-            if (tryMove(-1, 1)) return aim();
-            if (currentCaseCopy[0] < 7) { if (tryMove(-1, 0)) return aim() }
-            if (currentCaseCopy[1] > 4) { if (tryMove(0, 1)) return aim() }
-            return false;
-        case 1:
-            if (tryMove(1, -1)) return aim();
-            if (currentCaseCopy[0] > 4) { if (tryMove(1, 0)) return aim() }
-            if (currentCaseCopy[1] < 7) { if (tryMove(0, -1)) return aim() }
-            return false;
-        case 1:
-            if (tryMove(-1, -1)) return aim();
-            if (currentCaseCopy[0] < 7) { if (tryMove(-1, 0)) return aim() }
-            if (currentCaseCopy[1] < 7) { if (tryMove(0, -1)) return aim() }
-            return false;
-    }
-}
-
-function direction(dir) {
-    switch (dir) {
-        case 0:
-            if (currentCaseCopy[0] > 5) currentCase[0] += 1;
-            else currentCase[0] -= 1;
-            if (currentCaseCopy[1] > 5) currentCase[1] += 1;
-            else currentCase[1] -= 1;
-            break;
-        case 1:
-            if (currentCaseCopy[0] < 6 && currentCaseCopy[1] < 6) return 0;
-            if (currentCaseCopy[0] > 6 && currentCaseCopy[1] < 6) return 1;
-            if (currentCaseCopy[0] < 6 && currentCaseCopy[1] > 6) return 2;
-            return 3;
-    }
-    return true;
-}
-
-function outside() {
-    if (currentCaseCopy[0] > 10 || currentCaseCopy[0] < 1 || currentCaseCopy[1] > 10 || currentCaseCopy[1] < 1) return 1;
-    return 0;
-}
-
-function tryMove(dirX, dirY) {
-    if (canvasState[currentCaseCopy[0] + dirX, currentCaseCopy[1] + dirY]) return false;
-    currentCaseCopy[0] += dirX;
-    currentCaseCopy[1] += dirY;
-    return true;
-}
 
 function drawGrille() {
     ctx.beginPath();
