@@ -159,7 +159,9 @@ function mouseOut() {
     lastCase = [-1, -1];
 }
 
-function aim()
+function aim(){
+    
+}
 
 function drawGrille() {
     ctx.beginPath();

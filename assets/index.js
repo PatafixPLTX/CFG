@@ -48,6 +48,22 @@ fs.readdir(path.join(__dirname, 'style'), function (err, files) {
     });
 });
 
+fs.readdir(path.join(__dirname, 'auth'), function (err, files) {
+    if (err) return console.log("Error: " + err);
+    files.forEach((file) => {
+        app.get('/auth/' + file, (req, res) => {
+            res.sendFile(path.join(__dirname, 'auth/' + file));
+        });
+    });
+});
+
+fs.readFile('login.html', 'utf8', function(err, data) {
+    if (err) throw err;
+    app.get('/login', (req, res) => {
+        res.send(data);
+    });
+});
+
 app.listen(port, () => {
     console.log(`CFG app listening on port ${port}`);
 });
