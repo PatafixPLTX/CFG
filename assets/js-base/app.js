@@ -26,6 +26,10 @@ function offHover() {
     $("#profileImg").attr('src', 'img/profileImg.jpg');
 }
 
+function award() {
+    send("award5click", "Secret award received");
+}
+
 // cursor pointer hover
 document.getElementById("log_out").style.cursor = "pointer";
 document.getElementById("profile").style.cursor = "pointer";
