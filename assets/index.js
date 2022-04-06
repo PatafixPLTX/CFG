@@ -96,17 +96,13 @@ let ws = null;
 
 wss.on('connection', wsArg => {
     ws = wsArg;
-    console.log("connection ready");
+    console.log("Connection ready");
     ws.on('message', message => {
         //received json message that we convert to object
-        console.log("message: ");
-        console.log(message);
-        console.log("\n");
         let data = JSON.parse(message);
         if (data.type == "ping") {
             send("pong", data.data);
         }
-        
     });
 });
 

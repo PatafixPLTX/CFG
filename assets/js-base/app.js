@@ -27,7 +27,7 @@ function offHover() {
 }
 
 function award() {
-    send("award5click", "Secret award received");
+    send("Award5click", "Secret award received");
 }
 
 // cursor pointer hover
