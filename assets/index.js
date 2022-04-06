@@ -21,11 +21,20 @@ fs.readdir(path.join(__dirname, 'img'), function (err, files) {
     });
 });
 
-fs.readdir(path.join(__dirname, 'js'), function (err, files) {
+fs.readdir(path.join(__dirname, 'js-base'), function (err, files) {
     if (err) return console.log("Error: " + err);
     files.forEach((file) => {
-        app.get('/js/' + file, (req, res) => {
-            res.sendFile(path.join(__dirname, 'js/' + file));
+        app.get('/js-base/' + file, (req, res) => {
+            res.sendFile(path.join(__dirname, 'js-base/' + file));
+        });
+    });
+});
+
+fs.readdir(path.join(__dirname, 'js-particular'), function (err, files) {
+    if (err) return console.log("Error: " + err);
+    files.forEach((file) => {
+        app.get('/js-particular/' + file, (req, res) => {
+            res.sendFile(path.join(__dirname, 'js-particular/' + file));
         });
     });
 });
@@ -54,13 +63,6 @@ fs.readdir(path.join(__dirname, 'auth'), function (err, files) {
         app.get('/auth/' + file, (req, res) => {
             res.sendFile(path.join(__dirname, 'auth/' + file));
         });
-    });
-});
-
-fs.readFile('login.html', 'utf8', function(err, data) {
-    if (err) throw err;
-    app.get('/login', (req, res) => {
-        res.send(data);
     });
 });
 
