@@ -4,5 +4,5 @@ contentCreation.rel = "stylesheet";
 contentCreation.type = "text/css";
 contentCreation.href = "style/sliderStyle.css";
 contentCreation = document.createElement("script");
-contentCreation.src = "js/settings.js";
+contentCreation.src = "js-particular/settings.js";
 content.appendChild(contentCreation);
