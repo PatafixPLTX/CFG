@@ -96,7 +96,6 @@ let ws = null;
 
 wss.on('connection', wsArg => {
     ws = wsArg;
-    console.log("Connection ready");
     ws.on('message', message => {
         //received json message that we convert to object
         let data = JSON.parse(message);
