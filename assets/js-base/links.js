@@ -96,9 +96,7 @@ let profile_func = () => {
 let removeCanvas = ()=>{
     try{
         canvas.parentNode.removeChild(canvas);
-    }catch(error){
-        console.log("canvas still not defined yet");
-    }
+    }catch(error){}
 }
 
 let tableau = [play, home, news, shop, rank, settings, profile];
