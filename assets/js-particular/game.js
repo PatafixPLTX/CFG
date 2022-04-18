@@ -64,6 +64,7 @@ function begin() {
     canvas.style.display = "block";
     canvas.addEventListener("mousemove", mouseMove);
     canvas.addEventListener("mouseout", mouseOut);
+    canvas.addEventListener("click", mouseClick);
 
     ctx = canvas.getContext("2d");
 
@@ -111,7 +112,7 @@ function mouseMove(event) {
                 eraseCase(lastCase[0] - 1, lastCase[1] - 1);
                 lastCase[0] = currentCase[0];
                 lastCase[1] = currentCase[1];
-                let aimVar = aim();
+                let aimVar = 1;
                 if (aimVar == 1) {
                     console.log("move circle");
                     drawYourCircle(currentCaseCopy[0] - 1, currentCaseCopy[1] - 1);
@@ -130,6 +131,18 @@ function mouseMove(event) {
 function mouseOut() {
     eraseCase(lastCase[0] - 1, lastCase[1] - 1);
     lastCase = [-1, -1];
+}
+
+function mouseClick(){
+    if (yourTurn) {
+        if (lastCase[0] != -1 && lastCase[1] != -1) {
+            if (canvasState[lastCase[0]-1][lastCase[1]-1] == 0) {
+                canvasState[lastCase[0]-1][lastCase[1]-1] = 1;
+                yourTurn = false;
+                drawPions();
+            }
+        }
+    }
 }
 
 function aim(){

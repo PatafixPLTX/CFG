@@ -33,4 +33,4 @@ function award() {
 // cursor pointer hover
 document.getElementById("log_out").style.cursor = "pointer";
 document.getElementById("profile").style.cursor = "pointer";
-document.getElementById("logo").style.cursor = "pointer";
+//document.getElementById("logo").style.cursor = "pointer";
