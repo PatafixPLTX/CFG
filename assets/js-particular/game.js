@@ -31,7 +31,7 @@ function calcCanvasSize(windowWidth, windowHeight) {
     return this.size;
 };
 
-$(document).ready(function () {
+//function start() {
     canvas = document.createElement('canvas');
     canvas.width = calcCanvasSize($(window).width() - 250, $(window).height());
     canvas.height = canvas.width;
@@ -42,7 +42,7 @@ $(document).ready(function () {
     contentCreation.href = "style/canvas.css";
     content.appendChild(contentCreation);
     document.body.appendChild(canvas);
-    contentCreation = document.createElement("img");
+    /*contentCreation = document.createElement("img");
     contentCreation.src = "img/piont_blue.png";
     contentCreation.id = "yourPion";
     contentCreation.style.display = "none";
@@ -53,12 +53,12 @@ $(document).ready(function () {
     contentCreation.id = "enemyPion";
     contentCreation.style.display = "none";
     content.appendChild(contentCreation);
-    enemyPion = document.getElementById("enemyPion");
+    enemyPion = document.getElementById("enemyPion");*/
     halfWidthCanvas = canvas.width / 2;
     halfHeigthCanvas = canvas.height / 2;
 
     setTimeout(begin, 250);
-});
+//};
 
 function begin() {
     canvas.style.display = "block";

@@ -86,13 +86,18 @@ const db = mySql.createConnection({
 });
 
 db.connect(function (err) {
-    if (err) return console.log(err);
+    if (err) return; //console.log(err);
     console.log("Connecté à la base de données MySQL!");
 });
 
 const WebSocket = require('ws');
 const wss = new WebSocket.Server({ port: 8080 });
-let ws = null;
+
+function toBase64(data) {
+    let buff =  Buffer.from(data);
+    let base64data = buff.toString('base64');
+    return base64data;
+}
 
 wss.on('connection', wsArg => {
     ws = wsArg;
@@ -102,8 +107,32 @@ wss.on('connection', wsArg => {
         if (data.type == "ping") {
             send("pong", data.data);
         }
+        else if (data.type == "pawnGet"){
+            if(!checkAccessPawn(data.data, data.client)) return send("pawnGet", {type:"Error",data:"Error: Access denied(pawn "+data.data+")"});
+            fs.readdir(path.join(__dirname, 'pawns'), function (err, files) {
+                files.forEach((file) => {
+                    // Check if the name of the directory ends correctely using a RegExp(format of the directory name: a-b-data where data is the data we want to compare)
+                    if (file.match(new RegExp("-" + data.data.id))) {
+                        fs.readFile(path.join(__dirname, 'pawns/' + file + "/" + data.data.size + ".png"), 'base64', (err, result) => {
+                            if (err) throw err;
+                            console.log(toBase64(result));
+                            fs.writeFile('test.txt', result, function(err) {
+                                if(err) console.error("error: "+err);
+                            });
+            
+                            send("pawnGet", { id: data.data.id, size: data.data.size, image: result});
+                        });
+                    }
+                });
+            });
+        }
     });
 });
+
+function checkAccessPawn(pawn, client) {
+    // not done yet
+    return true;
+}
 
 function send(_type, _data) {
     let message = { type: _type, data: _data };
