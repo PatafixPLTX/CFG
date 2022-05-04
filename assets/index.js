@@ -1,6 +1,6 @@
 /** Server static pages transmission part
  *   File is gitignored
- */
+ */ 
 
 const express = require('express');
 const path = require('path');
