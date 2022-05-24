@@ -33,19 +33,18 @@ let play_func = () => {
 	send("pawnGet", { id: 0b01, size: '50px' , player: 0});
 	send("pawnGet", { id: 0b10, size: '50px' , player: 1});
 	pawn = [];
-	function resolveOnReady() {
-		return new Promise((resolve) => {
-			scriptReady = () => {
-				resolve();
-			}
-		});
-	}
 	eventListeners["pawnGet"] = (data) => {
 		// create image element and give it the image data url in base 64(data.image)
 		let image = document.createElement("img");
 		image.src = "data:image/png;base64,"+data.image;
-		image.display = "none";
+		image.style = "visibility: hidden;";
 		document.body.appendChild(image);
+		image.onload = () => {
+			if(data.player){
+				return enemyPion = image;
+			}
+			return yourPion = image;
+		};
 	}
 	content.appendChild(newContent);
 }

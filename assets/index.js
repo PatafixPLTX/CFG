@@ -115,12 +115,11 @@ wss.on('connection', wsArg => {
                     if (file.match(new RegExp("-" + data.data.id))) {
                         fs.readFile(path.join(__dirname, 'pawns/' + file + "/" + data.data.size + ".png"), 'base64', (err, result) => {
                             if (err) throw err;
-                            console.log(toBase64(result));
                             fs.writeFile('test.txt', result, function(err) {
                                 if(err) console.error("error: "+err);
                             });
             
-                            send("pawnGet", { id: data.data.id, size: data.data.size, image: result});
+                            send("pawnGet", { id: data.data.id, size: data.data.size, image: result, player: data.data.player });
                         });
                     }
                 });
