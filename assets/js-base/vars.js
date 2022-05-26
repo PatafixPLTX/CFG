@@ -4,6 +4,7 @@
 let preferenceMaxCanvasSize = 600;
 let preferenceMinCanvasSize = 200;
 let preferredPercentageSize = 0.7;
+let preferredColor = "#FF0000";
 // end of client data
 
 let contentCreation = null; // variable used when creating content in sub-pages

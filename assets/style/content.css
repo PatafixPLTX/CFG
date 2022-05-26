@@ -36,6 +36,29 @@
   font-weight: 500;
 }
 
+.link{
+  transition: color 0.3s ease;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  color: #8080FF;
+  font-size: 25px;
+  font-weight: 500;
+  margin-left: 18px;margin-right: 18px;
+  width: 100%;
+}
+
+.link:hover{
+  color: #A0A0FF;
+}
+
+.news{
+  border: 2px #F5F5F5;
+  border-radius: 50px;
+  margin: 40px !important;
+  padding: 40px !important;
+}
+
 @media screen and (max-width: 600px) {
   .content{
     left: 78px;

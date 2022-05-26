@@ -1,6 +1,10 @@
+:root{
+  --CanvasBackground: #FF0000;
+}
+
 canvas {
     z-index: 100;
-    background: rgb(50,50,175);
+    background: var(--CanvasBackground);
     padding: 0;
     margin: auto;
     overflow-x: visible;
