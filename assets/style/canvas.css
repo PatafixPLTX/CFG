@@ -1,7 +1,3 @@
-:root{
-  --CanvasBackground: #FF0000;
-}
-
 canvas {
     z-index: 100;
     background: var(--CanvasBackground);

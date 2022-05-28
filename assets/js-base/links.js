@@ -16,11 +16,38 @@ let currentPage = 0;
 
 let fois = 0;
 
-let scriptReady = ()=>{};
+class Page{
+	constructor(name, files, uid, destroyFunction){
+		this.name = name;
+		this.script = files;
+		this.uid = uid;
+		if(typeof destroyFunction === "function"){
+			this.destroy = destroyFunction;
+		}else{
+			this.destroy = function(){
+				content.innerHTML = " ";
+			};
+		}
 
-function ab2str(buf) {
-    return String.fromCharCode.apply(null, new Uint16Array(buf));
+	}
+	create(lastPage){
+		if(lastPage == undefined) content.innerHTML="";
+		else{ 
+			if(this.uid == lastPage.uid) return false;
+			lastPage.destroy();
+		}
+		
+		let newContent = document.createElement("script");
+		newContent.src = `page/${this.script}`;
+		content.appendChild(newContent);
+	}
 }
+
+let test = new Page("test", "settings.js", 0);
+test.create({destroy: function(){content.innerHTML=""}});
+
+
+let scriptReady = ()=>{};
 
 let play_func = () => {
 	if (currentPage == 0) { if (fois > 5) award(); fois++; return; }
